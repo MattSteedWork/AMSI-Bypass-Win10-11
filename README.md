@@ -38,6 +38,7 @@ AmsiOpenSession compares the first 4 bytes of amsiContext to the HEX value equiv
 
 \
 80070057h = E_INVALIDARG
+
 \
 This bypasses all scans while that PowerShell process is running.
 
