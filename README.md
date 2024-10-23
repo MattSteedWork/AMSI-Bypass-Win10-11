@@ -56,6 +56,9 @@ This bypasses all scans while that PowerShell process is running.
 <img width="365" alt="cutterWin10" src="https://github.com/user-attachments/assets/1df3e389-0ca7-48e2-af3f-3c60980290cb">
 
 
+# Whats actually happening here? (Win 11 short Version)
+
+AmsiOpenSession takes amsiContext as an input, this is stored in RCX. This script gets a pointer to the address of amsiContext by drilling down through assemblies associated with the PowerShell session, overwrites the memory location that the '$ptr' points to (amsiContext 0x0 + 8 bytes) with 8 bytes of zeros. The pointer corresponds with the QWORD contents of (RCX + 8 bytes) in AmsiOpenSession, if RCX + 8 successfully compares to zero it will cause EAX to be set to 0x80070057, which is an E_INVALIDARG error. This will bypass AMSI for the remainder of the PowerShell session.
 
  
 ## Explaination of Code
