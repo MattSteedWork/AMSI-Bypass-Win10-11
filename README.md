@@ -37,6 +37,8 @@ AmsiOpenSession compares the first 4 bytes of amsiContext to the HEX value equiv
 \
 ```mov eax, 80070057h``` 
 
+<img width="453" alt="3" src="https://github.com/user-attachments/assets/87e0771c-c506-4fae-8968-2f92a74d67bc">
+
 
 \
 80070057h = E_INVALIDARG
@@ -46,13 +48,6 @@ This bypasses all scans while that PowerShell process is running.
 
 ## AmsiOpenSession Struct
 <img width="438" alt="struct" src="https://github.com/user-attachments/assets/7a7f2def-7dce-4b36-b376-7a15b2e87ede">
-
-
-
-## Error table
-
-<img width="453" alt="3" src="https://github.com/user-attachments/assets/87e0771c-c506-4fae-8968-2f92a74d67bc">
-
 
 
 ## Win 10
