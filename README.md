@@ -33,6 +33,8 @@ $ptr= [System.IntPtr]::Add([System.IntPtr]$g, 0x8);
 
 \
 AmsiOpenSession compares the first 4 bytes of amsiContext to the HEX value equivalent of 'AMSI'. If this operation fails it jumps to the code block 
+
+\
 ```mov eax, 80070057h``` 
 
 
