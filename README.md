@@ -41,7 +41,9 @@ $lines = $content -split "`n"
 
 # Execute each line
 foreach ($line in $lines) {
+    if ($line.Trim() -ne ""){
     Invoke-Expression $line
+    }
 }
 ```
 # Whats actually happening here? (Short Win10 Version)
